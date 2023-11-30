@@ -3,12 +3,12 @@ import { TopBar } from "../styles/headerstyle";
 const Header = () => {
   return (
     <TopBar>
-      <button>
-        <img src="images/bt_list.svg" />
+      <button onClick={() => {}}>
+        <img src="/images/bt_list.svg" />
       </button>
-      <h2>타이틀</h2>
-      <button>
-        <img src="images/bt_login.svg" />
+      <h2 style={{ textAlign: "center", color: "blue" }}>header</h2>
+      <button onClick={() => {}}>
+        <img src="/images/bt_login.svg" />
       </button>
     </TopBar>
   );

@@ -1,22 +1,22 @@
-import styled from "@emotion/styled";
+import { Route, Routes } from "react-router-dom";
+import Index from "./pages/Index";
+import Intro from "./pages/Intro";
+import DiaryAdd from "./pages/diary/DiaryAdd";
+import DiaryEdit from "./pages/diary/DiaryEdit";
+import DiaryIndex from "./pages/diary/Index";
 import "./styles/App.css";
-import "./components/Header";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 
 function App() {
-  const Contents = styled.main`
-    width: 100%;
-    min-height: 500px;
-  `;
-
   return (
     <div className="layout">
       <div className="wrap">
-        <Header />
-
-        <Contents>중심 컨텐츠</Contents>
-        <Footer />
+        <Routes>
+          <Route path="/" element={<Intro />}></Route>
+          <Route path="/home" element={<Index />}></Route>
+          <Route path="/diary" element={<DiaryIndex />}></Route>
+          <Route path="/diary/add" element={<DiaryAdd />}></Route>
+          <Route path="/diary/edit/:pk" element={<DiaryEdit />}></Route>
+        </Routes>
       </div>
     </div>
   );
