@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import React from "react";
 
 export const TopBar = styled.header`
   display: flex;
